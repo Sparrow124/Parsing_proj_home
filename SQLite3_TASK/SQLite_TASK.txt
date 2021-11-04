@@ -1,0 +1,8 @@
+INSERT INTO fourth (
+	InternalNumber,
+	NameSurname,
+	Position,
+	Salary,
+	Tax,
+	Month
+) SELECT InternalNumber, Name || Surname, Position, Salary, Taxes, Month FROM first, second, third WHERE first.ID=second.ID AND second.ID=third.ID;
